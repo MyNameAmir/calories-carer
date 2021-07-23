@@ -57,12 +57,12 @@ app.use(express.errorHandler({ logger } as any));
 
 app.hooks(appHooks);
 
-app.get('/favicon.ico', (req, res) => {
+app.use('/favicon.ico', (req, res) => {
     res.status(503).end();
 });
 
 
-app.get('/', (req, res) => {
+app.use('/', (req, res) => {
     res.status(503).end();
 });
 
