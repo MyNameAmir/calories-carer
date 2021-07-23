@@ -1,0 +1,66 @@
+{
+  "name": "Project2650",
+  "description": "An app that tracks your caloric intake/spenditure",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "",
+    "email": "amoin@langra.ca"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^13.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run compile && npm run jest",
+    "dev": "ts-node-dev --no-notify src/",
+    "start": "npm run compile && node lib/",
+    "jest": "jest  --forceExit",
+    "compile": "shx rm -rf lib/ && tsc"
+  },
+  "types": "lib/",
+  "dependencies": {
+    "@feathersjs/configuration": "^4.5.0",
+    "@feathersjs/errors": "^4.5.0",
+    "@feathersjs/express": "^4.5.0",
+    "@feathersjs/feathers": "^4.5.0",
+    "@feathersjs/transport-commons": "^4.5.0",
+    "async": "^2.6.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "feathers-mongoose": "^8.3.0",
+    "helmet": "^3.21.2",
+    "mongodb-core": "^3.2.7",
+    "mongoose": "^5.9.15",
+    "sendgrid": "^5.2.3",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.0.1",
+    "@types/cors": "^2.8.6",
+    "@types/helmet": "0.0.45",
+    "@types/jest": "^24.9.0",
+    "@types/mongoose": "^5.7.20",
+    "@types/serve-favicon": "^2.5.0",
+    "axios": "^0.21.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "shx": "^0.3.2",
+    "ts-jest": "^26.5.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  }
+}
