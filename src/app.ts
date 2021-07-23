@@ -57,13 +57,6 @@ app.use(express.errorHandler({ logger } as any));
 
 app.hooks(appHooks);
 
-app.use('/favicon.ico', (req, res) => {
-    res.status(503).end();
-});
 
-
-app.use('/', (req, res) => {
-    res.status(503).end();
-});
 
 export default app;
