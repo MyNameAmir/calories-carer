@@ -1,8 +1,8 @@
 import logger from './logger';
 import app from './app';
 
-const port = process.env.port;
-const server = app.listen(process.env.port);
+const port = process.env.port || 8080;
+const server = app.listen(port);
 
 app.use('/favicon.ico', (req, res) => {
     res.status(503).end();
