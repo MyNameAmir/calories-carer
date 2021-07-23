@@ -21,6 +21,8 @@ import mongoose from './mongoose';
 
 const app: Application = express(feathers());
 
+
+
 // Load app configuration
 app.configure(configuration());
 // Enable security, CORS, compression, favicon and body parsing
@@ -33,14 +35,7 @@ app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 // Host the public folder
 app.use('/', express.static(app.get('public')));
 
-app.get('/favicon.ico', (req, res) => {
-    res.status(503).end();
-});
 
-
-app.get('/', (req, res) => {
-    res.status(503).end();
-});
 
 // Set up Plugins and providers
 app.configure(express.rest());
@@ -61,5 +56,14 @@ app.use(express.notFound());
 app.use(express.errorHandler({ logger } as any));
 
 app.hooks(appHooks);
+
+app.get('/favicon.ico', (req, res) => {
+    res.status(503).end();
+});
+
+
+app.get('/', (req, res) => {
+    res.status(503).end();
+});
 
 export default app;
