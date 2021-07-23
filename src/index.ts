@@ -10,7 +10,6 @@ app.use('/favicon.ico', (req, res) => {
 
 
 app.use('/', (req, res) => {
-    res.status(503).end();
      res.status(404).end();
 });
 
