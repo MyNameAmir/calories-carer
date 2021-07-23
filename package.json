@@ -25,7 +25,7 @@
   "scripts": {
     "test": "npm run compile && npm run jest",
     "dev": "ts-node-dev --no-notify src/",
-    "start": "ts-node-dev --no-notify src/",
+    "start": "npm run dev",
     "jest": "jest  --forceExit",
     "compile": "shx rm -rf lib/ && tsc"
   },
