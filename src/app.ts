@@ -34,12 +34,12 @@ app.use(favicon(path.join(app.get('public'), 'favicon.ico')));
 app.use('/', express.static(app.get('public')));
 
 app.get('/favicon.ico', (req, res) => {
-    res.status(204).end();
+    res.status(503).end();
 });
 
 
 app.get('/', (req, res) => {
-    res.status(204).end();
+    res.status(503).end();
 });
 
 // Set up Plugins and providers
